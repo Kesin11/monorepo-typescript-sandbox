@@ -1,3 +1,3 @@
-const consumer = require('./lib/consumer')
+const { consumer } = require('./dist/consumer')
 
 consumer()

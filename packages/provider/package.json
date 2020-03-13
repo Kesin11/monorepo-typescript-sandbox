@@ -5,15 +5,19 @@
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/provider.js",
+  "main": "dist/provider.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
+    "build": "tsc -b",
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
   }
 }
