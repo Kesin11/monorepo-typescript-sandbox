@@ -25,7 +25,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@my-lerna-typescript-sandbox/provider": "^0.0.0"
+    "@my-lerna-typescript-sandbox/provider": "^0.0.0",
+    "@my-lerna-typescript-sandbox/types": "^0.0.0"
   },
   "devDependencies": {
     "typescript": "^3.8.3"

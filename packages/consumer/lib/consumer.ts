@@ -1,6 +1,8 @@
-import { provider } from '@my-lerna-typescript-sandbox/provider'
+import { IConsumer, Resource } from '@my-lerna-typescript-sandbox/types'
 
-export function consumer() {
-    const arr = provider()
-    arr.forEach((val: number) => console.log(val))
+export class Consumer implements IConsumer {
+    constructor() {}
+    consume(resources: Resource[]) {
+        return resources.pop()
+    }
 }
