@@ -1,4 +1,4 @@
-import { Provider } from '../lib/provider'
+import { Provider } from '../src/provider'
 
 describe('Provider', () => {
   it('generate', () => {

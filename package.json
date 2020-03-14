@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "clean": "lerna run clean",
     "build": "lerna run build",
+    "build:clean": "npm run clean && npm run build",
     "test": "lerna run test",
-    "lint": "eslint --cache \"packages/**/{lib,__tests__}/**/*.ts\"",
+    "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {

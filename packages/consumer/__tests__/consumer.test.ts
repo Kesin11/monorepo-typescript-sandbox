@@ -1,4 +1,4 @@
-import { Consumer } from '../lib/consumer'
+import { Consumer } from '../src/consumer'
 import { Resource } from '@my-lerna-typescript-sandbox/types'
 
 describe('Consumer', () => {

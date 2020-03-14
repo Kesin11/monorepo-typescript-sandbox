@@ -1,0 +1,36 @@
+name: "CI"
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: "node:current"
+    steps:
+    # Prepare
+    - uses: actions/checkout@v2
+    - run: npm ci
+    # Run
+    - run: npm run lint
+
+  test:
+    strategy:
+      matrix:
+        container: ["node:current", "node:lts"]
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ matrix.container }}
+    steps:
+    # Prepare
+    - uses: actions/checkout@v2
+    - name: "Show version"
+      run: |
+        node --version
+        npm --version
+    - run: npm ci
+    - run: npm run bootstrap
+    # Run
+    - run: npm run build
+    - run: npm run test
