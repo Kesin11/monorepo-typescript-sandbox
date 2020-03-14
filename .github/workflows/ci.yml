@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         container: ["node:current", "node:lts"]
+      fail-fast: false
 
     runs-on: ubuntu-latest
     container:
