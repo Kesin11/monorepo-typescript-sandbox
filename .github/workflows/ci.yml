@@ -2,6 +2,17 @@ name: "CI"
 on: [push]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: "node:current"
+    steps:
+    # Prepare
+    - uses: actions/checkout@v2
+    - run: npm ci
+    # Run
+    - run: npm run lint
+
   test:
     strategy:
       matrix:
@@ -20,6 +31,5 @@ jobs:
     - run: npm ci
     - run: npm run bootstrap
     # Run
-    - run: npm run lint
     - run: npm run build
     - run: npm run test
