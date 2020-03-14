@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "tsc -b"
   },
   "devDependencies": {
     "typescript": "^3.8.3"

@@ -23,13 +23,16 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
     "@my-lerna-typescript-sandbox/provider": "^0.0.0",
     "@my-lerna-typescript-sandbox/types": "^0.0.0"
   },
   "devDependencies": {
+    "@types/jest": "25.1.4",
+    "jest": "25.1.0",
+    "ts-jest": "25.2.1",
     "typescript": "^3.8.3"
   }
 }
