@@ -18,6 +18,7 @@ jobs:
         node --version
         npm --version
     - run: npm ci
+    - run: npm run bootstrap
     # Run
     - run: npm run lint
     - run: npm run build
