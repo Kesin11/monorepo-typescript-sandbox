@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "main": "dist/consumer.js",
+  "types": "dist/consumer.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
