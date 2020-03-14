@@ -11,4 +11,7 @@ module.exports = {
   "parserOptions": {
       "sourceType": "module",
   },
+  "rules": {
+    "@typescript-eslint/interface-name-prefix": "off"
+  }
 }
