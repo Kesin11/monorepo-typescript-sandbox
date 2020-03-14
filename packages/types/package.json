@@ -14,18 +14,16 @@
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "main": "dist/types.js",
   "types": "dist/types.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc -b",
+    "clean": "rimraf dist",
     "test": "tsc -b"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   }
 }
