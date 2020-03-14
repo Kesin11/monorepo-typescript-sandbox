@@ -1,10 +1,17 @@
 {
-  "name": "types",
+  "name": "@my-lerna-typescript-sandbox/types",
   "version": "0.0.0",
   "description": "> TODO: description",
+  "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
+  "bugs": {
+    "url": "https://github.com/Kesin11/my-lerna-typescript-sandbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kesin11/my-lerna-typescript-sandbox.git"
+  },
+  "license": "MIT",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
-  "homepage": "",
-  "license": "ISC",
   "main": "dist/types.js",
   "directories": {
     "lib": "lib",

@@ -1,4 +1,4 @@
-import { provider } from 'provider'
+import { provider } from '@my-lerna-typescript-sandbox/provider'
 
 export function consumer() {
     const arr = provider()

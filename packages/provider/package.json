@@ -1,10 +1,17 @@
 {
-  "name": "provider",
+  "name": "@my-lerna-typescript-sandbox/provider",
   "version": "0.0.0",
   "description": "> TODO: description",
+  "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
+  "bugs": {
+    "url": "https://github.com/Kesin11/my-lerna-typescript-sandbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kesin11/my-lerna-typescript-sandbox.git"
+  },
+  "license": "MIT",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
-  "homepage": "",
-  "license": "ISC",
   "main": "dist/provider.js",
   "directories": {
     "lib": "lib",
@@ -19,5 +26,8 @@
   },
   "devDependencies": {
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@my-lerna-typescript-sandbox/types": "^0.0.0"
   }
 }
