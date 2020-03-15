@@ -12,6 +12,9 @@
     "url": "ssh://git@github.com/Kesin11/my-lerna-typescript-sandbox.git",
     "directory": "packages/consumer"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "main": "dist/consumer.js",
   "types": "dist/consumer.d.ts",
