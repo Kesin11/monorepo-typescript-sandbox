@@ -9,9 +9,9 @@
     "test": "lerna run test",
     "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
-    "versionup": "lerna version --conventional-commits",
+    "versionup": "test $GH_TOKEN && lerna version --conventional-commits --create-release github",
     "release": "npm run build:clean && lerna publish from-package",
-    "release:prepare": "shipjs prepare",
+    "release:prepare": "test $GITHUB_TOKEN && shipjs prepare",
     "release:trigger": "shipjs trigger"
   },
   "devDependencies": {
