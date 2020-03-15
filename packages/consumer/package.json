@@ -1,6 +1,6 @@
 {
   "name": "@kesin11/lerna-sandbox-consumer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
@@ -14,7 +14,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
   "main": "dist/consumer.js",
@@ -28,8 +28,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@kesin11/lerna-sandbox-provider": "^0.0.1",
-    "@kesin11/lerna-sandbox-types": "^0.0.1"
+    "@kesin11/lerna-sandbox-provider": "^0.0.2",
+    "@kesin11/lerna-sandbox-types": "^0.0.2"
   },
   "devDependencies": {
     "@types/jest": "25.1.4",

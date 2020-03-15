@@ -1,6 +1,6 @@
 {
   "name": "@kesin11/lerna-sandbox-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
   "bugs": {
@@ -13,7 +13,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
