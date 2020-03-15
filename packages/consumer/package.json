@@ -1,6 +1,6 @@
 {
   "name": "@kesin11/lerna-sandbox-consumer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
@@ -27,8 +27,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@kesin11/lerna-sandbox-provider": "^0.0.0",
-    "@kesin11/lerna-sandbox-types": "^0.0.0"
+    "@kesin11/lerna-sandbox-provider": "^0.0.1",
+    "@kesin11/lerna-sandbox-types": "^0.0.1"
   },
   "devDependencies": {
     "@types/jest": "25.1.4",
