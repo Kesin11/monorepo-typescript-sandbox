@@ -4,5 +4,5 @@ module.exports = {
     packagesToBump: ['packages/*'],
     packagesToPublish: ['packages/*']
   },
-  installCommand: ({ isYarn }) => 'npm run bootstrap'
+  installCommand: ({ isYarn }) => 'npm i && npm run bootstrap'
 }
