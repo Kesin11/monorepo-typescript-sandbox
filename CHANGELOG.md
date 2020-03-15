@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/Kesin11/my-lerna-typescript-sandbox/compare/v0.0.3...v0.1.1) (2020-03-15)
+
+
+### Features
+
+* Fix shipjs config ([7c5cb1c](https://github.com/Kesin11/my-lerna-typescript-sandbox/commit/7c5cb1c4e1be7068074ecdb4fbfe8731760332ca))
+
+
+
+
+
 ## [0.0.3](https://github.com/Kesin11/my-lerna-typescript-sandbox/compare/v0.0.1...v0.0.3) (2020-03-15)
 
 
