@@ -9,7 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Kesin11/my-lerna-typescript-sandbox.git"
+    "url": "ssh://git@github.com/Kesin11/my-lerna-typescript-sandbox.git",
+    "directory": "packages/consumer"
   },
   "license": "MIT",
   "main": "dist/consumer.js",

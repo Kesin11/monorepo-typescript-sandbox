@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Kesin11/my-lerna-typescript-sandbox.git"
+    "url": "ssh://git@github.com/Kesin11/my-lerna-typescript-sandbox.git",
+    "directory": "packages/provider"
   },
   "license": "MIT",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
