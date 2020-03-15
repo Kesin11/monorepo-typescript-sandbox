@@ -1,6 +1,6 @@
 {
   "name": "@kesin11/lerna-sandbox-provider",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
   "bugs": {
@@ -35,7 +35,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@kesin11/lerna-sandbox-types": "^0.0.3",
+    "@kesin11/lerna-sandbox-types": "0.1.0",
     "rimraf": "^3.0.2"
   },
   "gitHead": "46206344dfc394d00692027aa291d85977732448"

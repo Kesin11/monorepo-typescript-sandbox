@@ -4,6 +4,5 @@ module.exports = {
     packagesToBump: ['packages/*'],
     packagesToPublish: ['packages/*']
   },
-  updateChangelog: false,
-  publishCommand: ({ isYarn, tag, defaultCommand, dir }) => 'npm run release'
+  updateChangelog: false
 }
