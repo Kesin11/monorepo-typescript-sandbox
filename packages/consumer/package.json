@@ -1,5 +1,5 @@
 {
-  "name": "@my-lerna-typescript-sandbox/consumer",
+  "name": "@kesin11/lerna-sandbox-consumer",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
@@ -23,8 +23,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@my-lerna-typescript-sandbox/provider": "^0.0.0",
-    "@my-lerna-typescript-sandbox/types": "^0.0.0"
+    "@kesin11/lerna-sandbox-provider": "^0.0.0",
+    "@kesin11/lerna-sandbox-types": "^0.0.0"
   },
   "devDependencies": {
     "@types/jest": "25.1.4",

@@ -1,4 +1,4 @@
-import { Provider } from '@my-lerna-typescript-sandbox/provider'
+import { Provider } from '@kesin11/lerna-sandbox-provider'
 import { Consumer } from './consumer'
 
 const provider = new Provider()

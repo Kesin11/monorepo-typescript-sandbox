@@ -1,5 +1,5 @@
 import { Consumer } from '../src/consumer'
-import { Resource } from '@my-lerna-typescript-sandbox/types'
+import { Resource } from '@kesin11/lerna-sandbox-types'
 
 describe('Consumer', () => {
   it('consume', () => {

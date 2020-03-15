@@ -1,5 +1,5 @@
 {
-  "name": "@my-lerna-typescript-sandbox/provider",
+  "name": "@kesin11/lerna-sandbox-provider",
   "version": "0.0.0",
   "description": "> TODO: description",
   "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
@@ -30,7 +30,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@my-lerna-typescript-sandbox/types": "^0.0.0",
+    "@kesin11/lerna-sandbox-types": "^0.0.0",
     "rimraf": "^3.0.2"
   }
 }

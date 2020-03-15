@@ -1,4 +1,4 @@
-import { IProvider, Resource } from '@my-lerna-typescript-sandbox/types'
+import { IProvider, Resource } from '@kesin11/lerna-sandbox-types'
 
 export class Provider implements IProvider {
   generate (): Resource[] {

@@ -1,4 +1,4 @@
-import { IConsumer, Resource } from '@my-lerna-typescript-sandbox/types'
+import { IConsumer, Resource } from '@kesin11/lerna-sandbox-types'
 
 export class Consumer implements IConsumer {
   consume (resources: Resource[]): Resource | undefined {
