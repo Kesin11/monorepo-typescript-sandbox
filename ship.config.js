@@ -4,5 +4,6 @@ module.exports = {
     packagesToBump: ['packages/*'],
     packagesToPublish: ['packages/*']
   },
-  installCommand: ({ isYarn }) => 'npm i && npm run bootstrap'
+  updateChangelog: false,
+  publishCommand: ({ isYarn, tag, defaultCommand, dir }) => 'npm run release'
 }
