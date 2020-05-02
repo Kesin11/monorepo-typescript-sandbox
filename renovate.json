@@ -3,17 +3,12 @@
     ":ignoreModulesAndTests",
     ":label(renovate)",
     ":prConcurrentLimit10",
-    ":timezone(Asia/Tokyo)"
+    ":timezone(Asia/Tokyo)",
+    "schedule:monthly",
+    ":automergeAll",
+    ":unpublishSafe"
   ],
-  "npm": {
-    "extends": [
-      "schedule:monthly",
-      ":automergeAll",
-      ":unpublishSafe"
-    ],
-    "lockFileMaintenance": {
-      "enabled": true
-    },
-    "rangeStrategy": "bump"
+  "lockFileMaintenance": {
+    "enabled": true
   }
 }
