@@ -29,10 +29,12 @@
   },
   "dependencies": {
     "@kesin11/lerna-sandbox-provider": "0.1.0",
-    "@kesin11/lerna-sandbox-types": "0.1.0"
+    "@kesin11/lerna-sandbox-types": "0.1.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@types/jest": "25.2.1",
+    "@types/lodash": "^4.14.150",
     "jest": "25.5.3",
     "rimraf": "^3.0.2",
     "ts-jest": "25.4.0",
