@@ -28,8 +28,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@types/jest": "25.2.3",
-    "jest": "25.5.3",
+    "@types/jest": "26.0.3",
+    "jest": "26.1.0",
     "rimraf": "^3.0.2",
     "ts-jest": "25.4.0",
     "typescript": "3.9.5"
