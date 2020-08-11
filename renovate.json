@@ -6,9 +6,8 @@
     ":timezone(Asia/Tokyo)",
     "schedule:monthly",
     ":automergeAll",
-    ":unpublishSafe"
-  ],
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+    ":unpublishSafe",
+    ":maintainLockFilesMonthly",
+    ":dependencyDashboard"
+  ]
 }
