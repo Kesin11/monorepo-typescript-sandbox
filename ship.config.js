@@ -3,6 +3,5 @@ module.exports = {
     mainVersionFile: 'lerna.json',
     packagesToBump: ['packages/*'],
     packagesToPublish: ['packages/*']
-  },
-  updateChangelog: false
+  }
 }
