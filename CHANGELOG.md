@@ -1,3 +1,12 @@
+# [](https://github.com/Kesin11/my-lerna-typescript-sandbox/compare/v0.1.0...v) (2020-08-19)
+
+
+### Bug Fixes
+
+* **consumer:** Add lodash ([c918fa1](https://github.com/Kesin11/my-lerna-typescript-sandbox/commit/c918fa1fed782df7dec52f6e95809b28b8692234))
+
+
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
