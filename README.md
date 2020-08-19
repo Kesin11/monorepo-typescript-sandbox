@@ -34,3 +34,6 @@ npm run release:trigger
 ```
 
 各packagesが互いに依存はしていない場合、shipjsのフローでも多分大丈夫。
+
+**追記**  
+shipjsのリリースサイクルのhookポイントにおいて `lerna version` を実行することでpackagesが互いに依存している場合でも正しくバージョンアップできる方法を発見できた。詳細は [ship.config.js](./ship.config.js) 参照。
