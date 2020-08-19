@@ -9,8 +9,7 @@
     "test": "lerna run test",
     "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
-    "versionup": "test $GH_TOKEN && lerna version --conventional-commits --create-release github",
-    "release": "npm run build:clean && lerna publish from-package",
+    "version": "lerna version --no-git-tag-version -y",
     "release:prepare": "test $GITHUB_TOKEN && shipjs prepare",
     "release:trigger": "shipjs trigger"
   },

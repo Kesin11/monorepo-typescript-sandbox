@@ -17,11 +17,8 @@ jobs:
         with:
           registry-url: "https://registry.npmjs.org"
       - run: |
-          if [ -f "yarn.lock" ]; then
-            yarn install
-          else
-            npm install
-          fi
+          npm install
+          npm run bootstrap
       - run: npm run release:trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
