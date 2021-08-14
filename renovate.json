@@ -1,13 +1,22 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    ":ignoreModulesAndTests",
+    "config:base",
+    ":dependencyDashboard",
     ":label(renovate)",
     ":prConcurrentLimit10",
     ":timezone(Asia/Tokyo)",
     "schedule:monthly",
     ":automergeAll",
-    ":unpublishSafe",
+    "npm:unpublishSafe",
     ":maintainLockFilesMonthly",
-    ":dependencyDashboard"
+    "group:definitelyTyped"
+  ],
+  "packageRules": [
+    {
+      "groupName": "jest packages",
+      "matchPackagePatterns": ["jest"],
+      "matchDepTypes": ["devDependencies"]
+    }
   ]
 }
