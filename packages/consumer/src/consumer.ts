@@ -1,4 +1,4 @@
-import { IConsumer, Resource } from '@kesin11/lerna-sandbox-types'
+import { IConsumer, Resource } from '@kesin11/monorepo-sandbox-types'
 import { sum } from 'lodash'
 
 export class Consumer implements IConsumer {

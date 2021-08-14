@@ -1,14 +1,14 @@
 {
-  "name": "@kesin11/lerna-sandbox-provider",
+  "name": "@kesin11/monorepo-sandbox-provider",
   "version": "0.1.1",
-  "description": "> TODO: description",
-  "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
+  "description": "Provider package",
+  "homepage": "https://github.com/Kesin11/monorepo-typescript-sandbox",
   "bugs": {
-    "url": "https://github.com/Kesin11/my-lerna-typescript-sandbox/issues"
+    "url": "https://github.com/Kesin11/monorepo-typescript-sandbox/issues"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/Kesin11/my-lerna-typescript-sandbox.git",
+    "url": "ssh://git@github.com/Kesin11/monorepo-typescript-sandbox.git",
     "directory": "packages/provider"
   },
   "publishConfig": {
@@ -35,7 +35,7 @@
     "typescript": "4.3.5"
   },
   "dependencies": {
-    "@kesin11/lerna-sandbox-types": "^0.1.1"
+    "@kesin11/monorepo-sandbox-types": "^0.1.1"
   },
   "gitHead": "46206344dfc394d00692027aa291d85977732448"
 }

@@ -1,4 +1,4 @@
-import { IProvider, Resource } from '@kesin11/lerna-sandbox-types'
+import { IProvider, Resource } from '@kesin11/monorepo-sandbox-types'
 
 export class Provider implements IProvider {
   generate (): Resource[] {
