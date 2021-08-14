@@ -4,34 +4,42 @@ on: [push]
 jobs:
   lint:
     runs-on: ubuntu-latest
-    container:
-      image: "node:current"
     steps:
     # Prepare
     - uses: actions/checkout@v2
-    - run: npm ci
+    - uses: actions/setup-node@v2
+      with:
+        node-version: "lts/*"
+        cache: 'npm'
+    - run: |
+        npm i -g npm
+        npm ci
     # Run
     - run: npm run lint
+    - run: npm run reference -- --check
 
   test:
     strategy:
       matrix:
-        # container: ["node:current", "node:lts"]
-        container: ["node:lts"]
+        node-versions: ["14", "16"]
       fail-fast: false
 
     runs-on: ubuntu-latest
-    container:
-      image: ${{ matrix.container }}
     steps:
     # Prepare
     - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-versions }}
+        cache: 'npm'
+    # NOTE: npm workspace support from npm 7, so need to update npm when using nodejs 14
+    - run: |
+        npm i -g npm
+        npm ci
     - name: "Show version"
       run: |
         node --version
         npm --version
-    - run: npm ci
-    - run: npm run bootstrap
     # Run
     - run: npm run build
     - run: npm run test

@@ -15,10 +15,11 @@ jobs:
           ref: master
       - uses: actions/setup-node@v2
         with:
+          node-version: "lts/*"
           registry-url: "https://registry.npmjs.org"
       - run: |
-          npm install
-          npm run bootstrap
+          npm i -g npm
+          npm ci
       - run: npm run release:trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

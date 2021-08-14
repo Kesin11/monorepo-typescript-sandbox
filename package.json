@@ -1,19 +1,24 @@
 {
   "name": "root",
   "private": true,
+  "version": "0.1.1",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "clean": "lerna run clean",
-    "build": "lerna run build",
+    "reference": "workspaces-to-typescript-project-references",
+    "clean": "tsc -b --clean",
+    "build": "tsc -b",
     "build:clean": "npm run clean && npm run build",
-    "test": "lerna run test",
+    "test": "npm run test -ws",
     "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
-    "version": "lerna version --no-git-tag-version -y",
+    "version": "npm version --no-git-tag-version -ws",
     "release:prepare": "test $GITHUB_TOKEN && shipjs prepare",
     "release:trigger": "shipjs trigger"
   },
   "devDependencies": {
+    "@monorepo-utils/workspaces-to-typescript-project-references": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "4.28.5",
     "@typescript-eslint/parser": "4.28.5",
     "eslint": "7.32.0",
@@ -22,7 +27,6 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-standard": "4.1.0",
-    "lerna": "^4.0.0",
     "shipjs": "0.23.3",
     "typescript": "4.3.5"
   }
