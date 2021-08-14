@@ -12,6 +12,7 @@ jobs:
     - run: npm ci
     # Run
     - run: npm run lint
+    - run: npm run reference -- --check
 
   test:
     strategy:
@@ -31,7 +32,6 @@ jobs:
         node --version
         npm --version
     - run: npm ci
-    - run: npm run bootstrap
     # Run
     - run: npm run build
     - run: npm run test
