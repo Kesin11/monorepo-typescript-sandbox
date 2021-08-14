@@ -1,6 +1,6 @@
 import { Consumer } from '../src/consumer'
-import { Resource } from '@kesin11/lerna-sandbox-types'
-import { Provider } from '@kesin11/lerna-sandbox-provider'
+import { Resource } from '@kesin11/monorepo-sandbox-types'
+import { Provider } from '@kesin11/monorepo-sandbox-provider'
 
 describe('Consumer', () => {
   it('consume', () => {

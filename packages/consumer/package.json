@@ -1,15 +1,15 @@
 {
-  "name": "@kesin11/lerna-sandbox-consumer",
+  "name": "@kesin11/monorepo-sandbox-consumer",
   "version": "0.1.1",
-  "description": "> TODO: description",
+  "description": "Consumer pakcage",
   "author": "Kenta Kase <kesin1202000@gmail.com>",
-  "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
+  "homepage": "https://github.com/Kesin11/monorepo-typescript-sandbox",
   "bugs": {
-    "url": "https://github.com/Kesin11/my-lerna-typescript-sandbox/issues"
+    "url": "https://github.com/Kesin11/monorepo-typescript-sandbox/issues"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/Kesin11/my-lerna-typescript-sandbox.git",
+    "url": "ssh://git@github.com/Kesin11/monorepo-typescript-sandbox.git",
     "directory": "packages/consumer"
   },
   "publishConfig": {
@@ -28,8 +28,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@kesin11/lerna-sandbox-provider": "^0.1.1",
-    "@kesin11/lerna-sandbox-types": "^0.1.1",
+    "@kesin11/monorepo-sandbox-provider": "^0.1.1",
+    "@kesin11/monorepo-sandbox-types": "^0.1.1",
     "lodash": "^4.17.15"
   },
   "devDependencies": {

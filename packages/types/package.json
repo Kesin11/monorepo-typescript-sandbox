@@ -1,14 +1,14 @@
 {
-  "name": "@kesin11/lerna-sandbox-types",
+  "name": "@kesin11/monorepo-sandbox-types",
   "version": "0.1.1",
-  "description": "> TODO: description",
-  "homepage": "https://github.com/Kesin11/my-lerna-typescript-sandbox",
+  "description": "Types packages",
+  "homepage": "https://github.com/Kesin11/monorepo-typescript-sandbox",
   "bugs": {
-    "url": "https://github.com/Kesin11/my-lerna-typescript-sandbox/issues"
+    "url": "https://github.com/Kesin11/monorepo-typescript-sandbox/issues"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/Kesin11/my-lerna-typescript-sandbox.git",
+    "url": "ssh://git@github.com/Kesin11/monorepo-typescript-sandbox.git",
     "directory": "packages/types"
   },
   "publishConfig": {
