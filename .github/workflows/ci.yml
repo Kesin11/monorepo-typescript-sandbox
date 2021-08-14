@@ -9,7 +9,9 @@ jobs:
     steps:
     # Prepare
     - uses: actions/checkout@v2
-    - run: npm ci
+    - run: |
+        npm i -g npm
+        npm ci
     # Run
     - run: npm run lint
     - run: npm run reference -- --check
@@ -18,7 +20,7 @@ jobs:
     strategy:
       matrix:
         # container: ["node:current", "node:lts"]
-        container: ["node:lts"]
+        container: ["node:current"]
       fail-fast: false
 
     runs-on: ubuntu-latest
@@ -27,11 +29,14 @@ jobs:
     steps:
     # Prepare
     - uses: actions/checkout@v2
+    # NOTE: npm workspace support from npm 7, so need to update npm when using nodejs 14
+    - run: |
+        npm i -g npm
+        npm ci
     - name: "Show version"
       run: |
         node --version
         npm --version
-    - run: npm ci
     # Run
     - run: npm run build
     - run: npm run test
