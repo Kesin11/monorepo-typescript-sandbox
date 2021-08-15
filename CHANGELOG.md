@@ -1,5 +1,7 @@
 # [1.0.0](https://github.com/Kesin11/my-lerna-typescript-sandbox/compare/v0.1.1...v1.0.0) (2021-08-15)
 
+- monorepo管理をlernaからnpm7のworkspaceに移行
+- TypeScriptのProject referenceを導入。全パッケージのビルドはまとめて行うように変更
 
 ### Bug Fixes
 
