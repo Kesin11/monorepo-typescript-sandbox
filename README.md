@@ -56,7 +56,7 @@ npm run test
 
 npm workspaceの機能によって各packagesそれぞれの `npm run test` が実行される。
 
-注意点はpackageが他のpakageに依存している場合（例: packages/consumerはpackages/provider, packages/typesに依存している）は依存されている側があらかじめビルド済みで `dist` に.jsや.d.tsが存在しないと型の解決ができなかったりimportできないので当然テストも動かない。
+注意点はpackageが他のpackageに依存している場合（例: packages/consumerはpackages/provider, packages/typesに依存している）は依存されている側があらかじめビルド済みで `dist` に.jsや.d.tsが存在しないと型の解決ができなかったりimportできないので当然テストも動かない。
 
 事前に全てが最新の状態にビルドされていないとテスト結果がおかしくなる可能性があることに注意する。
 
@@ -91,3 +91,7 @@ shipjs + lernaと同じくpackage-lock.jsonが更新されないことが原因�
 
 詳細は[ship.config.js](./ship.config.js)を参照。
 
+# 参考
+- https://github.com/Quramy/npm-ts-workspaces-example
+- [TypeScriptのProject Referencesを使ってソースコードを分割し、レイヤー間の依存関係を強制する](https://zenn.dev/katsumanarisawa/articles/58103deb4f12b4)
+- [lerna/yarn/npm workspacesとTypeScript Project Referencesの設定を同期するツール](https://efcl.info/2020/11/23/workspaces-to-typescript-project-references/)
