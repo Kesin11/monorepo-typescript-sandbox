@@ -1,4 +1,4 @@
-import { Provider } from '@kesin11/lerna-sandbox-provider'
+import { Provider } from '@kesin11/monorepo-sandbox-provider'
 import { Consumer } from './consumer'
 
 const provider = new Provider()
