@@ -19,9 +19,7 @@
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "main": "dist/provider.js",
   "types": "dist/provider.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsc -b",
     "clean": "rimraf dist",

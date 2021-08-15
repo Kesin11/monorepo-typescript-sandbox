@@ -19,9 +19,7 @@
   "license": "MIT",
   "main": "dist/consumer.js",
   "types": "dist/consumer.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsc -b",
     "clean": "rimraf dist",
