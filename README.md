@@ -70,20 +70,21 @@ npm run versionup
 npm run release
 ```
 
-各packagesが互いに依存している場合、shipjsのフローは無理そう。
+各packagesが互いに依存している場合、shipjsはデフォルトのフローでは途中のnpm installでうまく更新できないのでhackが必要になる。
 
-### shipjsの場合
+### shipjs + lernaの場合
 shipjs prepareで一応lerna.jsonや各packagesのバージョンを上げつつ、CHANGELOGを生成してPRを作ってくれる。
 
-packagesが互いに依存していても、それぞれのdependenciesは書き換えてくれなさそう。
-さらに、triggerでpublishするときにforeachで各packagesを回しつつnpm publishをするらしいので、lerna publishが使えない。その結果、もしかすると依存関係の順番でリリースに失敗する可能性があるかもしれない。
+shipjsのmonorepoオプションは各packageのpackage.jsonのバージョンは書き換えるが、pakcage-lock.jsonは書き換えてくれない。lernaはローカルのpackage同士が依存している場合、互いのバージョンが揃っていないとnpm installがエラーになるためpackage-lock.jsonを気軽に直すことができない。
 
-```bash
-npm run release:prepare
-npm run release:trigger
-```
+一方でlerna-versionはpackage-lock.jsonを含めて正しくバージョンアップしてくれるため、shipjsの `versionUpdated` hookポイントを利用してが書き換えたpackage.jsonがコミットされる前に元に戻して `lerna version` を実行するhackによって `shipjs prepare` をエラーなく完遂させることが可能になる。
 
-各packagesが互いに依存はしていない場合、shipjsのフローでも多分大丈夫。
+詳細は[v0.1.1時代のship.config.js](https://github.com/Kesin11/monorepo-typescript-sandbox/blob/v0.1.1/ship.config.js)を参照。
 
-**追記**  
-shipjsのリリースサイクルのhookポイントにおいて `lerna version` を実行することでpackagesが互いに依存している場合でも正しくバージョンアップできる方法を発見できた。詳細は [ship.config.js](./ship.config.js) 参照。
+### shipjs + npm workspaceの場合
+shipjs + lernaと同じくpackage-lock.jsonが更新されないことが原因でhackが必要になる。 `shipjs prepare` のデフォルト挙動では各パッケージのversionとdependenciesを一気に書き換えるので途中の `npm install` がエラーになってしまう。
+
+解決策もlernaのときと同様だが、 `npm version` によるversionの更新はlernaと異なりpackage-lock.jsonまでは更新してくれないため `versionUpdated` 中に行うhackの手数が多い。
+
+詳細は[ship.config.js](./ship.config.js)を参照。
+
