@@ -1,6 +1,9 @@
-# my-lerna-typescript-sandbox
+# monorepo-typescript-sandbox
 
-npm workspace + TypeScript project reference + Github Packagesの素振り
+npm workspace + TypeScript project reference + Shipjsの素振り
+
+- <= [v0.1.1](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v0.1.1)時代: lerna + TypeScript + Shipjs
+- >= v1.0.0時代: npm workspace + TypeScript project reference + Shipjs
 
 ## Install
 ```bash
