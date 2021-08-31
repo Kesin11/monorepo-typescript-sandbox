@@ -34,7 +34,7 @@
     "@types/jest": "27.0.1",
     "@types/lodash": "^4.14.150",
     "jest": "27.0.6",
-    "rimraf": "^3.0.2",
+    "rimraf": "3.0.2",
     "ts-jest": "27.0.5",
     "typescript": "4.3.5"
   },
