@@ -17,8 +17,8 @@
     "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "version": "npm version --no-git-tag-version -ws",
-    "release:prepare": "test $GITHUB_TOKEN && shipjs prepare",
-    "release:trigger": "shipjs trigger"
+    "release:prepare": "test $GITHUB_TOKEN && npx shipjs prepare",
+    "release:trigger": "npx shipjs trigger"
   },
   "devDependencies": {
     "@monorepo-utils/workspaces-to-typescript-project-references": "2.6.2",
@@ -30,7 +30,6 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.1.1",
     "eslint-plugin-standard": "4.1.0",
-    "shipjs": "0.24.1",
     "typescript": "4.4.3"
   }
 }
