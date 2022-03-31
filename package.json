@@ -21,7 +21,7 @@
     "release:trigger": "npx shipjs trigger"
   },
   "devDependencies": {
-    "@monorepo-utils/workspaces-to-typescript-project-references": "2.7.4",
+    "@monorepo-utils/workspaces-to-typescript-project-references": "2.7.6",
     "@typescript-eslint/eslint-plugin": "4.28.5",
     "@typescript-eslint/parser": "4.28.5",
     "eslint": "7.32.0",
