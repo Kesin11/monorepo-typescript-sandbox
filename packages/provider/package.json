@@ -1,6 +1,6 @@
 {
   "name": "@kesin11/monorepo-sandbox-provider",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Provider package",
   "homepage": "https://github.com/Kesin11/monorepo-typescript-sandbox",
   "bugs": {
@@ -19,7 +19,9 @@
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "main": "dist/provider.js",
   "types": "dist/provider.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -b",
     "clean": "tsc -b --clean",
