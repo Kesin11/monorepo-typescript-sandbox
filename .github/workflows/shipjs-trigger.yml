@@ -1,8 +1,8 @@
-name: Ship js trigger
+name: Release
 on:
   push:
-    # branches:
-    #   - master
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     needs: draft_release
-    # if: github.event_name == "push"
+    if: github.event_name == "workflow_dispatch"
     steps:
       # Create version string from tag (v1.0.0 -> 1.0.0)
       - name: Create version string
@@ -32,9 +32,6 @@ jobs:
         with:
           fetch-depth: 0
           ref: master
-      - run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
       - uses: actions/setup-node@v2
         with:
           node-version: "lts/*"
@@ -44,6 +41,13 @@ jobs:
         run: |
           git status
           git diff
+      - name: git push to bump changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -u
+          git commit -m "chore: release v${VERSION}"
+          # git push origin master
       # Publish github releases. Also tag will be created.
       - uses: release-drafter/release-drafter@v5
         # with:
