@@ -15,10 +15,7 @@
     "build:clean": "npm run clean && npm run build",
     "test": "npm run test -ws",
     "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
-    "lint:fix": "npm run lint -- --fix",
-    "version": "npm version --no-git-tag-version -ws",
-    "release:prepare": "test $GITHUB_TOKEN && npx shipjs prepare",
-    "release:trigger": "npx shipjs trigger"
+    "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {
     "@monorepo-utils/workspaces-to-typescript-project-references": "2.7.6",
