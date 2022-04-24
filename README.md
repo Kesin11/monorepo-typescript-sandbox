@@ -1,9 +1,14 @@
 # monorepo-typescript-sandbox
 
-npm workspace + TypeScript project reference + Shipjsの素振り
+npm workspace + TypeScript project reference + リリース自動化の素振り
 
-- <= [v0.1.1](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v0.1.1)時代: lerna + TypeScript + Shipjs
-- >= v1.0.0時代: npm workspace + TypeScript project reference + Shipjs
+ここまでの変遷
+
+|バージョン|構成|
+|----|----|
+|[v0.1.1](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v0.1.1)|lerna + TypeScript + Shipjs|
+|[v1.0.0](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v1.0.0)|npm workspace + TypeScript project reference + Shipjs|
+|[v2.0.0](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v2.0.0)|npm workspace + TypeScript project reference + release-drafter|
 
 ## Install
 ```bash
@@ -69,29 +74,31 @@ CHANGELOG生成 -> Github Releaseまで一気通貫で行われるため、shipj
 packagesが互いに依存している場合、自動でpackage.jsonのdependenciesを書き換えてくれるはず。
 
 ```bash
-npm run versionup
-npm run release
+lerna version --conventional-commits
+lerna publish from-package
 ```
 
-各packagesが互いに依存している場合、shipjsはデフォルトのフローでは途中のnpm installでうまく更新できないのでhackが必要になる。
-
 ### shipjs + lernaの場合
-shipjs prepareで一応lerna.jsonや各packagesのバージョンを上げつつ、CHANGELOGを生成してPRを作ってくれる。
-
-shipjsのmonorepoオプションは各packageのpackage.jsonのバージョンは書き換えるが、pakcage-lock.jsonは書き換えてくれない。lernaはローカルのpackage同士が依存している場合、互いのバージョンが揃っていないとnpm installがエラーになるためpackage-lock.jsonを気軽に直すことができない。
-
-一方でlerna-versionはpackage-lock.jsonを含めて正しくバージョンアップしてくれるため、shipjsの `versionUpdated` hookポイントを利用してが書き換えたpackage.jsonがコミットされる前に元に戻して `lerna version` を実行するhackによって `shipjs prepare` をエラーなく完遂させることが可能になる。
-
-詳細は[v0.1.1時代のship.config.js](https://github.com/Kesin11/monorepo-typescript-sandbox/blob/v0.1.1/ship.config.js)を参照。
+[v0.1.1](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v0.1.1)のREADME参照
 
 ### shipjs + npm workspaceの場合
-shipjs + lernaと同じくpackage-lock.jsonが更新されないことが原因でhackが必要になる。 `shipjs prepare` のデフォルト挙動では各パッケージのversionとdependenciesを一気に書き換えるので途中の `npm install` がエラーになってしまう。
+[v1.0.0](https://github.com/Kesin11/monorepo-typescript-sandbox/tree/v1.0.0)のREADME参照
 
-解決策もlernaのときと同様だが、 `npm version` によるversionの更新はlernaと異なりpackage-lock.jsonまでは更新してくれないため `versionUpdated` 中に行うhackの手数が多い。
+### release-drafter + npm workspaceの場合
+#### バージョンの書き換え
+`npm version -ws major` のように `npm verson` を実行すると全パッケージのバージョンを上げてくれる。昔はpackage-lock.jsonまでは更新していなかった気がするがいつの間にか同時に更新されるようになっていた。ただし、monorepoの各パッケージが互いに依存している場合にそれぞれの `dependencies` のバージョンまでは上げてくれない。`^1.0.0` の指定の場合はpatchとminorまでは問題ないがmajorを上げるときに `npm install` がエラーになってしまう。
 
-詳細は[ship.config.js](./ship.config.js)を参照。
+majorのときに手動で修正が必要になるのを避けるため、バージョン指定を `"*"` にすることで制約を無しにしておく。workspaceを使っている場合はmonorepoのパッケージを参照するように `npm install` されるので多分問題はないはず。
+
+#### リリース作業
+リリース作業は手動（workflow_dispatch）+ [release-drafter](https://github.com/marketplace/actions/release-drafter)で行う。release-drafterはGithub Releasesの作成とSemantic Versioningに基づく次バージョンの文字列を自動生成してくれるので、次バージョンの文字列を使用して `npm version` でバージョンを更新する。
+
+release-drafterはshipjsのようにツールが裏側で自動的に各種コマンドを実行するわけではないため、nodejs以外の言語でも使えるしnpmの標準的なフロー以外の作業が必要なリポジトリにも応用しやすいメリットがある。
+
+release-drafterはSemantic Versioningの解決をshipjsの[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)ではなく、pull-requestsのラベルを使用する。このルールは[release-drafter.yml](./.github/release-drafter.yml)で独自にカスタマイズを行っている。
 
 # 参考
 - https://github.com/Quramy/npm-ts-workspaces-example
 - [TypeScriptのProject Referencesを使ってソースコードを分割し、レイヤー間の依存関係を強制する](https://zenn.dev/katsumanarisawa/articles/58103deb4f12b4)
 - [lerna/yarn/npm workspacesとTypeScript Project Referencesの設定を同期するツール](https://efcl.info/2020/11/23/workspaces-to-typescript-project-references/)
+- [npm-version#workspaces](https://docs.npmjs.com/cli/v8/commands/npm-version#workspaces)
