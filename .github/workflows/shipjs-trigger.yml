@@ -17,9 +17,7 @@ jobs:
         with:
           node-version: "lts/*"
           registry-url: "https://registry.npmjs.org"
-      - run: |
-          npm i -g npm
-          npm ci
+      - run: npm ci
       - run: npm run release:trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
