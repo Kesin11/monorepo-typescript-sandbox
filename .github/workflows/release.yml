@@ -37,20 +37,16 @@ jobs:
           node-version: "lts/*"
           cache: "npm"
       - run: npm version -ws $VERSION
-      - name: "debug"
-        run: |
-          git status
-          git diff
       - name: git push to bump changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -u
           git commit -m "chore: release v${VERSION}"
-          # git push origin master
+          git push origin master
       # Publish github releases. Also tag will be created.
       - uses: release-drafter/release-drafter@v5
-        # with:
-        #   publish: true
+        with:
+          publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
