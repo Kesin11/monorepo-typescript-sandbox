@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     needs: draft_release
-    if: github.event_name == "workflow_dispatch"
+    if: github.event_name == 'workflow_dispatch'
     steps:
       # Create version string from tag (v1.0.0 -> 1.0.0)
       - name: Create version string
