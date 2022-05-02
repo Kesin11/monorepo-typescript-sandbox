@@ -88,7 +88,7 @@ lerna publish from-package
 #### バージョンの書き換え
 `npm version -ws major` のように `npm verson` を実行すると全パッケージのバージョンを上げてくれる。昔はpackage-lock.jsonまでは更新していなかった気がするがいつの間にか同時に更新されるようになっていた。ただし、monorepoの各パッケージが互いに依存している場合にそれぞれの `dependencies` のバージョンまでは上げてくれない。`^1.0.0` の指定の場合はpatchとminorまでは問題ないがmajorを上げるときに `npm install` がエラーになってしまう。
 
-majorのときに手動で修正が必要になるのを避けるため、バージョン指定を `"*"` にすることで制約を無しにしておく。workspaceを使っている場合はmonorepoのパッケージを参照するように `npm install` されるので多分問題はないはず。
+majorのときに手動で修正が必要になるのを避けるため、バージョン指定を `"*"` にすることで制約を無しにしておく。workspaceを使っている場合はmonorepoのパッケージを参照するように `npm install` されるので多分問題はないはず。参照できているかどうかは `npm ls` で確認できる。
 
 #### リリース作業
 リリース作業は手動（workflow_dispatch）+ [release-drafter](https://github.com/marketplace/actions/release-drafter)で行う。release-drafterはGithub Releasesの作成とSemantic Versioningに基づく次バージョンの文字列を自動生成してくれるので、次バージョンの文字列を使用して `npm version` でバージョンを更新する。
