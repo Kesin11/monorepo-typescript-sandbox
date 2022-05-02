@@ -34,7 +34,7 @@
     "typescript": "4.4.3"
   },
   "dependencies": {
-    "@kesin11/monorepo-sandbox-types": "^1.0.0"
+    "@kesin11/monorepo-sandbox-types": "*"
   },
   "gitHead": "46206344dfc394d00692027aa291d85977732448"
 }

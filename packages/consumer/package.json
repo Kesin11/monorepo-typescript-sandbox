@@ -28,8 +28,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@kesin11/monorepo-sandbox-provider": "^1.0.0",
-    "@kesin11/monorepo-sandbox-types": "^1.0.0",
+    "@kesin11/monorepo-sandbox-provider": "*",
+    "@kesin11/monorepo-sandbox-types": "*",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
