@@ -20,12 +20,14 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "clean": "tsc -b --clean"
+    "clean": "tsc -b --clean",
+    "pack": "ncc build -o ../../dist_app --minify"
   },
   "dependencies": {
     "@kesin11/monorepo-sandbox-consumer": "*",
     "@kesin11/monorepo-sandbox-provider": "*",
-    "@kesin11/monorepo-sandbox-types": "*"
+    "@kesin11/monorepo-sandbox-types": "*",
+    "@vercel/ncc": "^0.34.0"
   },
   "devDependencies": {
     "typescript": "4.7.2"
