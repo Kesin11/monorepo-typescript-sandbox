@@ -28,7 +28,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@kesin11/monorepo-sandbox-provider": "*",
     "@kesin11/monorepo-sandbox-types": "*",
     "lodash": "^4.17.15"
   },
