@@ -1,7 +1,7 @@
 import { Provider } from '@kesin11/monorepo-sandbox-provider'
 import { Consumer } from '@kesin11/monorepo-sandbox-consumer'
 
-const main = async() => {
+const main = async () => {
   const provider = new Provider()
   const resources = provider.generate()
 
@@ -12,4 +12,3 @@ const main = async() => {
   console.log(resources)
 }
 main()
-
