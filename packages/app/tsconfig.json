@@ -9,6 +9,12 @@
   ],
   "references": [
     {
+      "path": "../consumer"
+    },
+    {
+      "path": "../provider"
+    },
+    {
       "path": "../types"
     }
   ]

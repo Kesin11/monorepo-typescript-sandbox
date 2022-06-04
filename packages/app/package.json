@@ -1,7 +1,8 @@
 {
-  "name": "@kesin11/monorepo-sandbox-consumer",
+  "name": "@kesin11/monorepo-sandbox-app",
   "version": "2.0.1",
-  "description": "Consumer package",
+  "description": "App package",
+  "private": true,
   "author": "Kenta Kase <kesin1202000@gmail.com>",
   "homepage": "https://github.com/Kesin11/monorepo-typescript-sandbox",
   "bugs": {
@@ -10,32 +11,25 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/Kesin11/monorepo-typescript-sandbox.git",
-    "directory": "packages/consumer"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "directory": "packages/app"
   },
   "license": "MIT",
-  "main": "dist/consumer.js",
-  "types": "dist/consumer.d.ts",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc -b",
     "clean": "tsc -b --clean",
-    "test": "jest"
+    "pack": "ncc build -o ../../dist_app --minify"
   },
   "dependencies": {
+    "@kesin11/monorepo-sandbox-consumer": "*",
+    "@kesin11/monorepo-sandbox-provider": "*",
     "@kesin11/monorepo-sandbox-types": "*",
-    "lodash": "^4.17.15"
+    "@vercel/ncc": "^0.34.0"
   },
   "devDependencies": {
-    "@types/jest": "27.0.3",
-    "@types/lodash": "4.14.182",
-    "jest": "27.4.3",
-    "ts-jest": "27.0.7",
     "typescript": "4.7.2"
   },
   "gitHead": "46206344dfc394d00692027aa291d85977732448"

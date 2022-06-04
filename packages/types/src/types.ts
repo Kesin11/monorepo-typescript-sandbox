@@ -3,5 +3,5 @@ export interface IProvider {
   generate: () => Resource[];
 }
 export interface IConsumer {
-  consume: (resources: Resource[]) => Resource | undefined;
+  consume: (resources: Resource[]) => Promise<Resource | undefined>;
 }

@@ -10,12 +10,13 @@
   ],
   "scripts": {
     "reference": "workspaces-to-typescript-project-references",
-    "clean": "tsc -b --clean",
+    "clean": "tsc -b --clean && rm -rf dist_app",
     "build": "tsc -b",
     "build:clean": "npm run clean && npm run build",
     "test": "npm run test -ws",
     "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "pack": "npm run build && npm run --ws --if-present pack"
   },
   "devDependencies": {
     "@monorepo-utils/workspaces-to-typescript-project-references": "2.8.2",
