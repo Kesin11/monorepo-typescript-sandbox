@@ -24,17 +24,17 @@ npm workspaceの機能により、packages以下の依存は全て巻き上げ�
 `lerna add` でいい感じにやってくれる。バージョンだけは正確に合わせる必要がある
 
 ```bash
-npx lerna add @kesin11/lerna-sandbox-provider@0.1.1 --scope @kesin11/lerna-sandbox-consumer
+npx lerna add @kesin11/monorepo-sandbox-provider@0.1.1 --scope @kesin11/monorepo-sandbox-consumer
 ```
 
 ### npm workspaceの場合
 ```bash
-npm i @kesin11/lerna-sandbox-provider@0.1.1 -w @kesin11/lerna-sandbox-consumer
+npm i @kesin11/monorepo-sandbox-provider@0.1.1 -w @kesin11/monorepo-sandbox-consumer
 ```
 
 `lerna add` のように `npm install` でいけるかと思いきや、registry.npmjs.orgにそんなパッケージは無いと怒られてしまう。
 
-`npm install` で入れる方法は分からなかったが、package.jsonのdependenciesに直接 `"@kesin11/lerna-sandbox-provider": "0.1.1"` と書いて `npm install` を実行すればちゃんとsymlinkを貼ってくれてよしなに解決してくれる。やはりバージョンは合わせる必要がある
+`npm install` で入れる方法は分からなかったが、package.jsonのdependenciesに直接 `"@kesin11/monorepo-sandbox-provider": "0.1.1"` と書いて `npm install` を実行すればちゃんとsymlinkを貼ってくれてよしなに解決してくれる。やはりバージョンは合わせる必要がある
 が、例えば `^0.1.0` のように解決される幅を広げた場合には最終的に依存している別のpackage.jsonのバージョンに解決できれば問題な
 さそう。この例だと逆に `0.1.0` と固定した場合にはエラーになる。
 
