@@ -27,7 +27,7 @@
     "@kesin11/monorepo-sandbox-consumer": "*",
     "@kesin11/monorepo-sandbox-provider": "*",
     "@kesin11/monorepo-sandbox-types": "*",
-    "@vercel/ncc": "0.34.0"
+    "@vercel/ncc": "0.36.1"
   },
   "devDependencies": {
     "typescript": "4.8.2"
