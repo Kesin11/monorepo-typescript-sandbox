@@ -28,7 +28,7 @@
     "test": "tsc -b"
   },
   "devDependencies": {
-    "typescript": "5.1.5"
+    "typescript": "5.1.6"
   },
   "gitHead": "46206344dfc394d00692027aa291d85977732448"
 }
