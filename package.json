@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "npm": ">=10.2.1"
+    "npm": ">=10.2.4"
   },
   "workspaces": [
     "packages/*"
