@@ -21,7 +21,9 @@
   "scripts": {
     "build": "tsc -b",
     "clean": "tsc -b --clean",
-    "pack": "ncc build -o ../../dist_app --minify"
+    "pack": "ncc build -o ../../dist_app --minify",
+    "test": "tsc --noEmit"
+
   },
   "dependencies": {
     "@kesin11/monorepo-sandbox-consumer": "*",
