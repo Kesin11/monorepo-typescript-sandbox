@@ -3,28 +3,25 @@
 const js = require('@eslint/js')
 const { FlatCompat } = require('@eslint/eslintrc')
 const typescriptEslintParser = require('@typescript-eslint/parser')
+const typeScriptEslint = require('@typescript-eslint/eslint-plugin')
 
 const compat = new FlatCompat()
 
 module.exports = [
     {
-        ignores: ['**/dist/'],
+        ignores: ['**/dist/', '**/*.config.js'],
     },
+    js.configs.recommended,
+    ...compat.extends(
+        'plugin:@typescript-eslint/recommended',
+    ),
     {
-        files: ["**/*.js"],
-        languageOptions: {
-            // https://eslint.org/blog/2022/08/new-config-system-part-2/#goodbye-environments%2C-hello-globals
-            // It contains old config `env.node = true` feature.
-            ecmaVersion: 'latest',
-            sourceType: 'commonjs',
-        },
-    },
-    {
-        files: ['packages/**/{src,__tests__}/**/*.ts'],
+        files: ['**/*.ts'],
         // If need to override rules, uncomment here.
         // rules: {
         //     semi: ["error", "always"],
         // },
+        plugins: { typeScriptEslint },
         languageOptions: {
             parser: typescriptEslintParser,
             parserOptions: {
@@ -33,8 +30,4 @@ module.exports = [
             },
         },
     },
-    js.configs.recommended,
-    ...compat.extends(
-        'plugin:@typescript-eslint/recommended',
-    )
 ]
