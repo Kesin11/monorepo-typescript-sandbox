@@ -25,7 +25,7 @@
   "scripts": {
     "build": "tsc -b",
     "clean": "tsc -b --clean",
-    "test": "tsc -b"
+    "test": "tsc --noEmit"
   },
   "devDependencies": {
     "typescript": "5.3.2"
