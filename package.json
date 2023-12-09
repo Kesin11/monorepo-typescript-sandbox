@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
+    "node": ">=20.0.0",
     "npm": ">=10.2.4"
   },
   "workspaces": [
@@ -14,20 +15,17 @@
     "build": "tsc -b",
     "build:clean": "npm run clean && npm run build",
     "test": "npm run test -ws",
-    "lint": "eslint --cache \"packages/**/{src,__tests__}/**/*.ts\"",
+    "lint": "eslint --cache .",
     "lint:fix": "npm run lint -- --fix",
     "pack": "npm run build && npm run --ws --if-present pack"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^2.1.4",
+    "@eslint/js": "^8.55.0",
     "@monorepo-utils/workspaces-to-typescript-project-references": "2.10.4",
-    "@typescript-eslint/eslint-plugin": "6.13.1",
-    "@typescript-eslint/parser": "6.13.1",
-    "eslint": "8.54.0",
-    "eslint-config-standard": "17.1.0",
-    "eslint-plugin-import": "2.29.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-standard": "4.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
     "typescript": "5.3.2"
   }
 }
