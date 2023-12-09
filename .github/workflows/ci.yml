@@ -19,7 +19,7 @@ jobs:
   test:
     strategy:
       matrix:
-        node-versions: ["16", "18"]
+        node-versions: ["20", "lts/*"]
       fail-fast: false
 
     runs-on: ubuntu-latest
