@@ -1,5 +1,5 @@
-import { Provider } from '@kesin11/monorepo-sandbox-provider'
-import { Consumer } from '@kesin11/monorepo-sandbox-consumer'
+import { Provider } from "@kesin11/monorepo-sandbox-provider"
+import { Consumer } from "@kesin11/monorepo-sandbox-consumer"
 
 const main = async () => {
   const provider = new Provider()
