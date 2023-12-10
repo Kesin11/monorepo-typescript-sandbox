@@ -17,6 +17,8 @@
     "test": "npm run test -ws",
     "lint": "eslint --cache .",
     "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write --cache --cache-strategy metadata .",
+    "format:check": "prettier --check --cache --cache-strategy metadata .",
     "pack": "npm run build && npm run --ws --if-present pack"
   },
   "devDependencies": {
@@ -26,6 +28,11 @@
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.0",
     "typescript": "5.3.2"
+  },
+  "prettier": {
+    "semi": false
   }
 }
