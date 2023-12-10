@@ -4,6 +4,7 @@ const js = require("@eslint/js")
 const { FlatCompat } = require("@eslint/eslintrc")
 const typescriptEslintParser = require("@typescript-eslint/parser")
 const typeScriptEslint = require("@typescript-eslint/eslint-plugin")
+const eslintConfigPrettier = require("eslint-config-prettier")
 
 const compat = new FlatCompat()
 
@@ -12,6 +13,7 @@ module.exports = [
     ignores: ["**/dist/", "**/*.config.js"],
   },
   js.configs.recommended,
+  eslintConfigPrettier,
   ...compat.extends("plugin:@typescript-eslint/recommended"),
   {
     files: ["**/*.ts"],
