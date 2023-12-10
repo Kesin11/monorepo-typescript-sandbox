@@ -1,6 +1,6 @@
 {
   "name": "@kesin11/monorepo-sandbox-app",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "App package",
   "private": true,
   "author": "Kenta Kase <kesin1202000@gmail.com>",
@@ -23,7 +23,6 @@
     "clean": "tsc -b --clean",
     "pack": "ncc build -o ../../dist_app --minify",
     "test": "tsc --noEmit"
-
   },
   "dependencies": {
     "@kesin11/monorepo-sandbox-consumer": "*",
