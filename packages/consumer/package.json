@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@kesin11/monorepo-sandbox-types": "*",
-    "@types/node": "^20.10.0",
+    "@types/node": "^20.10.5",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
