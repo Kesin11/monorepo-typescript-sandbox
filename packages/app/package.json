@@ -31,7 +31,7 @@
     "@vercel/ncc": "0.38.1"
   },
   "devDependencies": {
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   },
   "gitHead": "46206344dfc394d00692027aa291d85977732448"
 }
