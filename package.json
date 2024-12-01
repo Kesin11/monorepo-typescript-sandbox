@@ -22,7 +22,7 @@
     "pack": "npm run build && npm run --ws --if-present pack"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.13.0",
     "@monorepo-utils/workspaces-to-typescript-project-references": "2.10.4",
     "@typescript-eslint/eslint-plugin": "^8.12.1",
